@@ -6,21 +6,17 @@ import {
 import type { Article, Issue, Journal } from "@/components/publishing/types";
 
 const journal: Journal = {
-    name: "Journal of Knowledge Management",
+    title: "Journal of Knowledge Management",
     issn: "1367-3270",
     impactFactor: 7.9,
     publisher: "Demo Publishing",
-    abbreviation: "JO",
-};
+    };
 
 const currentIssue: Issue = {
     volume: 29,
     issue: 4,
     year: 2026,
-    hasPrevious: true,
-    hasNext: true,
 };
-
 const featured: Article = {
     id: "a1",
     title: "Tacit knowledge transfer in distributed research teams: a multi-site study",
@@ -69,14 +65,14 @@ export default function ArticleLanding() {
           <div className="min-h-svh bg-background font-sans text-foreground">
                 <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-10">
                         <JournalHeader journal={journal} />
-                        <IssueNavigation current={currentIssue} />
+                        <IssueNavigation current={currentIssue} hasPrevious hasNext />
                         <section className="flex flex-col gap-4">
                                   <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
                                               Featured
                                   </h2>
                                   <ArticleCard article={featured} variant="featured" showAbstract />
                         </section>
-                        <section classNamee="flex flex-col gap-4">
+                        <section className="flex flex-col gap-4">
                                   <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
                                               In this issue
                                   </h2>
