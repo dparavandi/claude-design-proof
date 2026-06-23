@@ -73,20 +73,20 @@ export default function ArticleLanding() {
                         <section className="flex flex-col gap-4">
                                   <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
                                               Featured
-                                  </h2>h2>
+                                  </h2>
                                   <ArticleCard article={featured} variant="featured" showAbstract />
-                        </section>section>
-                        <section className="flex flex-col gap-4">
+                        </section>
+                        <section classNamee="flex flex-col gap-4">
                                   <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
                                               In this issue
-                                  </h2>h2>
+                                  </h2>
                                   <div className="flex flex-col gap-4">
                                     {rest.map((article) => (
                           <ArticleCard key={article.id} article={article} showAbstract />
                         ))}
-                                  </div>div>
-                        </section>section>
-                </div>div>
-          </div>div>
+                                  </div>
+                        </section>
+                </div>
+          </div>
         );
-}</div>
+}
